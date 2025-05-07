@@ -1,0 +1,32 @@
+/* Estilo geral */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    transition: background-color 0.5s ease;
+}
+
+/* Fundo para cada período */
+body.nascerdosol {
+    background-color: #FFDAB9;
+}
+
+body.manha {
+    background-color: #FFFACD;
+}
+
+body.tarde {
+    background-color: #98FB98;
+}
+
+body.pordosol {
+    background-color: #FFB6C1;
+}
+
+body.noite {
+    background-color: #191970;
+}
+
+body.madrugada {
+    background-color: #D8BFD8;
+}
