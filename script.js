@@ -1,24 +1,39 @@
-document.addEventListener("DOMContentLoaded", () => {
-    const elementoImagem = document.querySelector("img");
-    const horaAtual = new Date().getHours();
+document.addEventListener("DOMContentLoaded", function () {
+    const img = document.querySelector("#imagem img");
+    const horaDiv = document.querySelector("#hora");
 
-    if (horaAtual >= 5 && horaAtual < 7) {
-        elementoImagem.src = "assets/nascerdosol.jpg";
-        elementoImagem.alt = "Imagem do Nascer do Sol";
-    } else if (horaAtual >= 7 && horaAtual < 12) {
-        elementoImagem.src = "assets/manha.jpg";
-        elementoImagem.alt = "Imagem da Manhã";
-    } else if (horaAtual >= 12 && horaAtual < 17) {
-        elementoImagem.src = "assets/tarde.png";
-        elementoImagem.alt = "Imagem da Tarde";
-    } else if (horaAtual >= 17 && horaAtual < 19) {
-        elementoImagem.src = "assets/pordosol.jpg";
-        elementoImagem.alt = "Imagem do Pôr do Sol";
-    } else if (horaAtual >= 19 || horaAtual < 5) {
-        elementoImagem.src = "assets/noite.png";
-        elementoImagem.alt = "Imagem da Noite";
-    } else {
-        elementoImagem.src = "assets/madrugada.png";
-        elementoImagem.alt = "Imagem da Madrugada";
+    function atualizarImagem() {
+        const hora = new Date().getHours();
+
+        if (hora >= 5 && hora < 7) {
+            img.src = "assets/nascerdosol.jpg";
+            img.alt = "Nascer do Sol";
+        } else if (hora >= 7 && hora < 12) {
+            img.src = "assets/manha.jpg";
+            img.alt = "Manhã";
+        } else if (hora >= 12 && hora < 17) {
+            img.src = "assets/tarde.png";
+            img.alt = "Tarde";
+        } else if (hora >= 17 && hora < 19) {
+            img.src = "assets/pordosol.jpg";
+            img.alt = "Pôr do Sol";
+        } else if (hora >= 19 || hora < 5) {
+            img.src = "assets/noite.png";
+            img.alt = "Noite";
+        } else {
+            img.src = "assets/madrugada.png";
+            img.alt = "Madrugada";
+        }
     }
+
+    function atualizarHora() {
+        const agora = new Date();
+        const horas = String(agora.getHours()).padStart(2, "0");
+        const minutos = String(agora.getMinutes()).padStart(2, "0");
+        const segundos = String(agora.getSeconds()).padStart(2, "0");
+        horaDiv.textContent = `${horas}:${minutos}:${segundos}`;
+    }
+
+    atualizarImagem();
+    setInterval(atualizarHora, 1000);
 });
