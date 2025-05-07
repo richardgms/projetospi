@@ -1,32 +1,63 @@
 /* Estilo geral */
 body {
     margin: 0;
-    font-family: Arial, sans-serif;
+    font-family: 'Poppins', sans-serif;
     text-align: center;
     transition: background-color 0.5s ease;
 }
 
+h1 {
+    font-size: 3.5rem;
+    margin-top: 20px;
+    color: #333;
+}
+
+#imagem {
+    margin: 40px auto;
+    width: 25vw;
+    height: 25vw;
+    max-width: 400px;
+    max-height: 400px;
+    min-width: 200px;
+    min-height: 200px;
+}
+
+#imagem img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+#hora h2 {
+    font-size: 3rem;
+    color: #555;
+    margin: 40px 0;
+    font-weight: 600;
+}
+
 /* Fundo para cada período */
 body.nascerdosol {
-    background-color: #FFDAB9;
+    background-color: #FFDAB5; /* Bege suave */
 }
 
 body.manha {
-    background-color: #FFFACD;
+    background-color: #FFF4B2; /* Amarelo pastel */
 }
 
 body.tarde {
-    background-color: #98FB98;
+    background-color: #B0EACD; /* Verde claro */
 }
 
 body.pordosol {
-    background-color: #FFB6C1;
+    background-color: #FFB3C6; /* Rosa suave */
 }
 
 body.noite {
-    background-color: #191970;
+    background-color: #1c2e37; /* Azul acinzentado */
 }
 
 body.madrugada {
-    background-color: #D8BFD8;
+    background-color: #5A6D8A; /* Lavanda suave */
 }
